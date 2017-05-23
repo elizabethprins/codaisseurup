@@ -11,7 +11,7 @@
     <p>Price: <%= @event.price %></p>
     <p>Capacity: <%= @event.capacity %></p>
 
-    
+
     <!-- About -->
     <h4>About</h4>
     <p><%= @event.description %></p>
@@ -22,6 +22,11 @@
       <li><%= !@event.includes_food ? ("Does not include food").html_safe : "Includes Food" %></li>
       <li><%= !@event.includes_drinks ? ("<Does not include drinks</del>").html_safe : "Includes Drinks" %></li>
     </ul>
+
+    <h4>Categories</h4>
+    <% @categories.each do |category| %>
+    <span class="label label-success"><%= category.name %></span>
+    <% end %>
 
   </div>
 

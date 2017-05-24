@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_one :profile
 
   def has_profile?
-    profile.present? && !profile.id.nil?
+    profile.present? && profile.persisted?
   end
 
   def full_name

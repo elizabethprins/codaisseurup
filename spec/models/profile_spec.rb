@@ -13,4 +13,8 @@ RSpec.describe Profile, type: :model do
       expect(subject).not_to include profile1
     end
   end
+
+  describe Profile do
+    it { should belong_to(:user) }
+  end
 end
